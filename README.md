@@ -1,5 +1,7 @@
 <div align="center">
-  <img src="docs/assets/banner.svg" alt="SuperSubdomainEnumerator — reconnaissance workflow orchestration" width="100%">
+  <img src="docs/assets/banner.svg" alt="SuperSubdomainEnumerator: reconnaissance workflow orchestration" width="100%">
+
+  <h3>Built by <a href="https://github.com/Gix13">Gio Abou Sleiman</a> for authorized penetration tests</h3>
 
   <p><strong>One controlled pipeline for discovery, crawling, and evidence-oriented vulnerability triage.</strong></p>
 
@@ -12,7 +14,7 @@
 
 ## Why this project exists
 
-Attack-surface discovery is rarely one command. Results arrive from passive sources, active enumerators, archives, crawlers, parameter miners, and specialist analyzers—each with different formats and failure modes. SuperSubdomainEnumerator coordinates those tools into a repeatable workflow with normalized inventories, per-stage evidence, and a clear separation between passive collection and active testing.
+Attack-surface discovery is rarely one command. Results arrive from passive sources, active enumerators, archives, crawlers, parameter miners, and specialist analyzers, each with different formats and failure modes. SuperSubdomainEnumerator coordinates those tools into a repeatable workflow with normalized inventories, per-stage evidence, and a clear separation between passive collection and active testing.
 
 It is designed for penetration testers and security teams operating from a written scope. The value is orchestration: the project does not replace the underlying tools or the analyst who validates their output.
 
@@ -44,10 +46,10 @@ flowchart LR
 
 | Method | Enumeration | Crawling | XSS analysis | SSRF/OAST analysis |
 | ---: | :---: | :---: | :---: | :---: |
-| `0` | ✓ | — | — | — |
-| `1` | ✓ | ✓ | — | — |
-| `2` | ✓ | ✓ | ✓ | — |
-| `3` | ✓ | ✓ | — | ✓ |
+| `0` | ✓ | No | No | No |
+| `1` | ✓ | ✓ | No | No |
+| `2` | ✓ | ✓ | ✓ | No |
+| `3` | ✓ | ✓ | No | ✓ |
 | `4` | ✓ | ✓ | ✓ | ✓ |
 
 Passive mode limits the pipeline to non-intrusive sources and archival collection. Active mode adds tools that contact the target. The script prompts for the mode before execution.
@@ -185,6 +187,6 @@ CI performs offline Python/JavaScript syntax checks and unit tests for normaliza
 
 ## Provenance
 
-SuperSubdomainEnumerator was created by Gio Abou Sleiman as part of an offensive-security reconnaissance suite developed during a penetration-testing internship. This public edition is a sanitized portfolio copy with credentials, cookies, client targets, captures, and real assessment output removed.
+SuperSubdomainEnumerator was created by Gio Abou Sleiman for authorized penetration-testing engagements. This public edition is a sanitized portfolio copy with credentials, cookies, client targets, captures, and real assessment output removed.
 
 For repository-security reports, see [SECURITY.md](SECURITY.md). For contribution expectations, see [CONTRIBUTING.md](CONTRIBUTING.md).

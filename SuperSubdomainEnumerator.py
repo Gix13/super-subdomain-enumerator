@@ -301,7 +301,7 @@ def run_wayback(domain, output_dir):
     return generic_tool('waybackurls', ['waybackurls', domain], 'wayback_output.txt', domain, output_dir)
 
 def run_amass(domain, output_dir):
-    # (kept for backward compatibility – passive)
+    # Kept for backward compatibility with passive mode.
     return generic_tool('amass', ['amass', 'enum', '-passive', '-d', domain], 'amass_output.txt', domain, output_dir)
 
 def run_amass_passive(domain, output_dir):
@@ -354,7 +354,7 @@ def run_shodan(domain, output_dir):
         except requests.HTTPError as e:
             code = r.status_code
             if code == 403:
-                debug("Shodan returned 403 Forbidden—your plan may not include this endpoint. Skipping Shodan.")
+                debug("Shodan returned 403 Forbidden. Your plan may not include this endpoint; skipping Shodan.")
                 break
             if code in (401, 429):
                 debug(f"Shodan credential failed ({code}), rotating")
@@ -805,7 +805,7 @@ def xss_nuclei(candidates_file, output_dir):
 
 def xss_xsstrike(candidates_file, output_dir):
     """
-    XSStrike (active) — run one URL per process with xargs.
+    XSStrike (active): run one URL per process with xargs.
     Force non-interactive by piping 'n' to the continue prompt.
     """
     out = os.path.join(output_dir, "xss_xsstrike_results.txt")
@@ -1688,7 +1688,7 @@ def run_ssrf(domain, output_dir):
 
     # 2) Passive-only branch
     if not ACTIVE_MODE:
-        debug("SSRF: passive mode selected — built candidates only; skipping network probes")
+        debug("SSRF: passive mode selected. Built candidates only; skipping network probes.")
         try:
             with open(os.path.join(output_dir, "ssrf_summary.txt"), "w") as f:
                 f.write("Mode: PASSIVE\n")
@@ -1697,7 +1697,7 @@ def run_ssrf(domain, output_dir):
             pass
         return set()
 
-    # 3) Active branch — get OAST automatically if needed
+    # 3) Active branch: get OAST automatically if needed
     oast_url_env = os.environ.get("OAST_URL", "").strip()
     if oast_url_env:
         oast_url = _normalize_oast(oast_url_env)
@@ -2143,7 +2143,7 @@ def main():
             try:
                 subprocess.run(["nordvpn", "disconnect"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
             except subprocess.CalledProcessError:
-                debug("NordVPN disconnect failed or wasn't connected—continuing anyway")
+                debug("NordVPN disconnect failed or wasn't connected; continuing anyway")
             debug(f"Connecting NordVPN to {nordvpn_location}")
             try:
                 subprocess.run(["nordvpn", "connect", nordvpn_location], check=True)
@@ -2257,7 +2257,7 @@ def main():
         try:
             subprocess.run(["nordvpn", "disconnect"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
         except subprocess.CalledProcessError:
-            debug("NordVPN final disconnect failed—no worries.")
+            debug("NordVPN final disconnect failed; continuing cleanup.")
         try:
             os.remove(LOCK_FILE)
         except OSError:
