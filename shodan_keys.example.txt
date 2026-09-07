@@ -1,0 +1,2 @@
+# Copy this file to shodan_keys.txt and place one authorized Shodan API key per line.
+# REPLACE_WITH_LOCAL_SHODAN_API_KEY

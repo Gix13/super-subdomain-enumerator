@@ -1,0 +1,2 @@
+# Copy this file to censys_keys.txt and use the format API_ID:API_SECRET.
+# REPLACE_WITH_LOCAL_CENSYS_API_ID:REPLACE_WITH_LOCAL_CENSYS_API_SECRET

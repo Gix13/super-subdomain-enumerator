@@ -1,0 +1,49 @@
+# API credentials and rotation state
+shodan_keys.txt
+censys_keys.txt
+*.pointer
+.env
+.env.*
+!.env.example
+
+# Targets, test inputs, and captured assessment data
+test_urls.txt
+test_urls_ssrf.txt
+targets.txt
+scope.txt
+*_20??????_??????/
+results/
+output/
+captures/
+*.hdr
+*.snippet
+*.har
+*.project
+*_output.txt
+*_cleaned.txt
+*_stderr.log
+combined_*.txt
+ssrf_*.txt
+xss_*.txt
+*.jsonl
+interactsh_hits.json
+interactsh_*.jsonl
+interactsh_*.log
+
+# Crawler output
+crawlee/output_*.txt
+crawlee/storage/
+crawlee/node_modules/
+
+# Python and Node
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+npm-debug.log*
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/

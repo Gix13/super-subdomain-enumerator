@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc">
+  <title id="title">SuperSubdomainEnumerator</title>
+  <desc id="desc">Reconnaissance workflow orchestration</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#100b24"/><stop offset="1" stop-color="#251149"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#c4b5fd" fill-opacity=".14"/></pattern>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1280" height="420" rx="28" fill="url(#bg)"/>
+  <rect width="1280" height="420" rx="28" fill="url(#grid)"/>
+  <g transform="translate(70 62)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150 35v55M72 125l50-29M228 125l-50-29M72 171l50 29M228 171l-50 29M150 206v55" stroke="#8b5cf6" stroke-width="4"/>
+    <g fill="#160d2d" stroke="url(#accent)" stroke-width="3">
+      <circle cx="150" cy="35" r="24"/><circle cx="72" cy="148" r="24"/><circle cx="228" cy="148" r="24"/><circle cx="150" cy="284" r="24"/>
+      <circle cx="150" cy="148" r="38"/>
+    </g>
+    <g fill="#f8fafc" filter="url(#glow)"><circle cx="150" cy="35" r="5"/><circle cx="72" cy="148" r="5"/><circle cx="228" cy="148" r="5"/><circle cx="150" cy="284" r="5"/><circle cx="150" cy="148" r="8"/></g>
+  </g>
+  <g transform="translate(370 92)">
+    <text x="0" y="68" fill="#f8fafc" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="55" font-weight="750" letter-spacing="-3">SUPER SUBDOMAIN</text>
+    <text x="0" y="130" fill="url(#accent)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="55" font-weight="750" letter-spacing="-3">ENUMERATOR</text>
+    <rect x="2" y="158" width="690" height="4" rx="2" fill="url(#accent)"/>
+    <text x="2" y="208" fill="#ddd6fe" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="25" letter-spacing="1">RECONNAISSANCE WORKFLOW ORCHESTRATION</text>
+    <text x="2" y="250" fill="#a1a1aa" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="19">Discover · normalize · crawl · correlate · preserve evidence</text>
+  </g>
+</svg>
